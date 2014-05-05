@@ -1,8 +1,4 @@
-var connect = require('connect');
-
-var app = connect();
-for(var name in connect) {
-    console.log(name, connect[name]);
-}
-console.log('Starting http server on http://localhost:4000');
+var miniHarp = require('mini-harp');
+var root = process.cwd();
+var app = miniHarp(root);
 app.listen(4000);
